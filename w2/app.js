@@ -17,7 +17,7 @@ const handleButtonClick = function() {
     // Increase totalCost by $15 each time the button is clicked
      totalCost += itemPrice;
     // Template strings (literal) to easily combine our variables and text into one message
-    let message = `Current total: $${totalCost}`
+    let message = `Current total: $${totalCost}`;
 
     // This is basic decision-making in JavaScript!
     // Use a simple 'if' statement to make our page react differently based on totalCost.
@@ -25,10 +25,10 @@ const handleButtonClick = function() {
         // We can even change the style of an HTML element directly with JavaScript!
         // Change text color
         message += ' (Over Budget!)';
-        totalDisplayElement.style.color = 'red'
+        totalDisplayElement.style.color = 'red';
     } else {
-        totalDisplayElement.style.color = '#259f35';
-    }
+        totalDisplayElement.style.color = '#259f35'
+    };
     // Update the text content of our paragraph element on the page.
     // This is how JavaScript makes changes visible on the web page!
     totalDisplayElement.textContent = message;
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // This part ensures our JavaScript code runs only AFTER the HTML is fully loaded and parsed.   
     // The 'DOMContentLoaded' event is perfect for this. It fires when the HTML document is ready.
 
-    console.log('DOM fully loaded and parsed, App is ready for interaction')
+    console.log('DOM fully loaded and parsed, App is ready for interaction');
     // Attach an event listener to our 'addItemButton.
     // When 'addItemButton' receives a 'click' event, the 'handleButtonClick' function will execute.
     addItemButton.addEventListener('click', handleButtonClick);
