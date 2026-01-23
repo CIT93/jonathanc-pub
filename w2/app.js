@@ -1,4 +1,4 @@
-console.log('Hello from app.js! Your JavaScript is connected and running!');
+console.log('Shopping cart app loaded and ready!');
 // --- Part 1: Select HTML Elements ----
 // We use document.getElementById() to get a reference to an element by its unique ID.
 // We store these references in 'const' variables because the elements themselves won't change.
@@ -14,26 +14,26 @@ let totalCost = 0;
 
 const handleButtonClick = function() {
     // totalCost = totalCost + 1;
-    // Increase totalCost by 1 each time the button is clicked
-     totalCost += 1;
+    // Increase totalCost by $15 each time the button is clicked
+     totalCost += itemPrice;
     // Template strings (literal) to easily combine our variables and text into one message
-    let message = `Hello, ! You have clicked the button ${totalCost} time(s).`
+    let message = `Current total: $${totalCost}`
 
     // This is basic decision-making in JavaScript!
     // Use a simple 'if' statement to make our page react differently based on totalCost.
-    if(totalCost >= 5) {
+    if(totalCost >= 60) {
         // We can even change the style of an HTML element directly with JavaScript!
         // Change text color
-        message += ' WOW, you are a super clicker!';
-        totalDisplayElement.style.color = 'purple'
+        message += ' (Over Budget!)';
+        totalDisplayElement.style.color = 'red'
     } else {
-        totalDisplayElement.style.color = '#333';
+        totalDisplayElement.style.color = '#259f35';
     }
     // Update the text content of our paragraph element on the page.
     // This is how JavaScript makes changes visible on the web page!
     totalDisplayElement.textContent = message;
 
-    console.log(`Button Clicked! Current click count: ${totalCost}`)
+    console.log(`Item added! Current total: ${totalCost}`)
 };
 
 
@@ -47,5 +47,5 @@ document.addEventListener('DOMContentLoaded', function(){
     // When 'addItemButton' receives a 'click' event, the 'handleButtonClick' function will execute.
     addItemButton.addEventListener('click', handleButtonClick);
 
-    totalDisplayElement.textContent = `Welcome, ! Click the button below to start counting`
+    totalDisplayElement.textContent = `Welcome, shopper! Click the button below to start shopping!`
 });
