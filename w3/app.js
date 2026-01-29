@@ -1,3 +1,7 @@
+console.log(`${radio.value}`)
+
+import * as orderForm from './order-handler.js'
+
 console.log('Shopping cart app loaded and ready!');
 // --- Part 1: Select HTML Elements ----
 // We use document.getElementById() to get a reference to an element by its unique ID.
