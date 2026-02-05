@@ -1,10 +1,11 @@
 // Import from order-handler.js
 import * as orderForm from "./order-handler.js";
 import * as priceCalculator from "./price-calculator.js"; 
+import * as orderSum from "./orderSum-display.js";
 
 // Setup elements
 const orderFormElement = document.getElementById('order-form');
-const orderSumDiv = document.getElementById('order-summary');
+// const orderSumDiv = document.getElementById('order-summary');
 
 const orders = [];
 
@@ -22,7 +23,7 @@ const handleOrderSubmit = function(event) {
     orders.push(newOrder);
     console.log(orders);
 
-    orderSumDiv.textContent = `Order Summary: Quantity: ${orderData.qty}, Gift Wrap: ${orderData.giftWrap}, Size: ${orderData.size}. Your total is $${priceData.totalPrice}.Thank you for your order!`;
+    orderSum.orderSummary(newOrder);
 }
 // Initialization function
 const init = function(){
