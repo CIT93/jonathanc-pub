@@ -2,6 +2,7 @@
 const shirtPrice = 15;
 const giftWrapPrice = 2;
 
+
 // Function to calculate total price
 export const calculateTotal = function(orderData) {
     console.log('Inside the calculator');
@@ -10,5 +11,7 @@ export const calculateTotal = function(orderData) {
     if (orderData.giftWrap) {
         total += giftWrapPrice;
     }
-    return {totalPrice: total};
+    return {
+        totalPrice: total
+    };
 }
