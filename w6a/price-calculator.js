@@ -5,7 +5,7 @@ const giftWrapPrice = 2;
 
 // Function to calculate total price
 export const calculateTotal = function(orderData) {
-    console.log('Inside the calculator');
+    // console.log('Inside the calculator');
     let total= orderData.qty * shirtPrice;
     // Using if to add giftwrapPrice
     if (orderData.giftWrap) {
