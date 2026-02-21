@@ -2,6 +2,7 @@
 import * as orderForm from "./order-handler.js";
 import * as priceCalculator from "./price-calculator.js"; 
 import * as resultsDisplay from "./results-display.js";
+import * as orderStorage from './order-storage.js';
 
 
 // Setup elements
@@ -28,6 +29,11 @@ const handleOrderSubmit = function(event) {
 }
 // Initialization function
 const init = function(){
+    const loadedOrders = orderStorage.loadOrders()
+    if (loadedOrders.length > 0) {
+        orders.push(...loadedOrders);
+        console.log('Orders loaded!');
+    }
     orderFormElement.addEventListener('submit', handleOrderSubmit);
 }
 // Initialize when the DOM is ready
