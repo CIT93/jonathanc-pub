@@ -1,7 +1,7 @@
 // Import from order-handler.js
 import * as orderForm from "./order-handler.js";
 import * as priceCalculator from "./price-calculator.js"; 
-import * as orderSum from "./orderSum-display.js";
+import * as resultsDisplay from "./results-display.js";
 
 
 // Setup elements
@@ -24,7 +24,7 @@ const handleOrderSubmit = function(event) {
     orders.push(newOrder);
     // console.log(orders);
 
-    orderSum.orderSummary(newOrder);
+    resultsDisplay.displayOrder(newOrder);
 }
 // Initialization function
 const init = function(){
